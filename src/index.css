@@ -11,3 +11,29 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.radio{
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  margin-bottom: 20px
+}
+
+.ant-radio-button-wrapper{
+  border-radius: 6px;
+  margin-bottom: 10px
+}
+
+:where(.css-dev-only-do-not-override-1gwfwyx)[class*=" ant-radio"] [class^="ant-radio"]::before{
+  content: none
+}
+
+:where(.css-dev-only-do-not-override-1gwfwyx).ant-radio-button-wrapper {
+  border-inline-start-width: 1px;
+}
+
+.container{
+  margin : 0 auto;
+  width: 70%;
+}
+
