@@ -18,7 +18,7 @@ const Quiz = () => {
   return (
     <div className='container'>
       <Card className='card'>
-        <h2>What is the full of JSX?</h2>
+        <h2 class='question'>What is the full of JSX?</h2>
         <CustomRadioButton options={options} value={selectedValue} onChange={handleChange}/>
       </Card>
     </div>

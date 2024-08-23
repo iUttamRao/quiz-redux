@@ -1,9 +1,9 @@
 import './App.css';
-import Quiz from './components/Quiz/Quiz';
+import QuizContainer from './components/Quiz/QuizContainer';
 
 function App() {
   return (
-    <Quiz />
+    <QuizContainer />
   );
 }
 

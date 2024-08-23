@@ -33,7 +33,11 @@ code {
 }
 
 .container{
-  margin : 0 auto;
-  width: 70%;
+  margin : 10px auto;
+  width: 60%;
+}
+
+.question{
+  text-align: center;
 }
 
