@@ -1,4 +1,4 @@
-export const Quiz = [
+export const QuizData = [
   {
     id: 1,
     question: "What is the primary purpose of React?",

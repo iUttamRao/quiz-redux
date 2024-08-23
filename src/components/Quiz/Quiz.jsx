@@ -1,28 +1,26 @@
-import React, { useState } from 'react'
+import React from 'react'
 import CustomRadioButton from '../../customComponents/CustomRadioButton'
 import { Card } from 'antd';
 
-const Quiz = () => {
-  const [selectedValue, setSelectedValue] = useState();
-
-  const options = [
-    { label: 'Apple', value: 1 },
-    { label: 'Pear', value: 2 },
-    { label: 'Orange', value: 3 },
-  ];
-
+const Quiz = ({ quizData, selectedAnswer = [], setSelectedAnswer }) => {
+  
   const handleChange = (e) => {
-    setSelectedValue(e.target.value);
+    const updatedAnswers = selectedAnswer.filter(item => item.id !== quizData?.id);
+    setSelectedAnswer([...updatedAnswers, { id: quizData?.id, value: e.target.value }]);
   };
 
   return (
-    <div className='container'>
+    <div className='container' key={quizData?.id}>
       <Card className='card'>
-        <h2 class='question'>What is the full of JSX?</h2>
-        <CustomRadioButton options={options} value={selectedValue} onChange={handleChange}/>
+        <h2 className='question'>{quizData?.id}. {quizData?.question}</h2>
+        <CustomRadioButton 
+          options={quizData?.options} 
+          value={selectedAnswer.find(item => item.id === quizData?.id)?.value} 
+          onChange={handleChange}
+        />
       </Card>
     </div>
   )
 }
 
-export default Quiz
+export default Quiz;

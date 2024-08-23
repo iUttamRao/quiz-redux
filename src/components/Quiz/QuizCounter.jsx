@@ -2,7 +2,7 @@ import { DoubleLeftOutlined, DoubleRightOutlined } from '@ant-design/icons';
 import { Button, Pagination } from 'antd'
 import React from 'react'
 
-const QuizCounter = () => {
+const QuizCounter = ({currentPage, totalPage, onChange}) => {
   const itemRender = (_, type, originalElement) => {
     if (type === 'prev') {
       return <Button icon={<DoubleLeftOutlined />}>Previous</Button>;
@@ -13,7 +13,14 @@ const QuizCounter = () => {
     return originalElement;
   };
   return (
-    <Pagination align="center" current={1} total={500} itemRender={itemRender} />
+    <Pagination
+      align="center"
+      current={currentPage}
+      total={totalPage}
+      onChange={onChange}
+      itemRender={itemRender}
+      pageSize={1}
+    />
   )
 }
 
