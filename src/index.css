@@ -41,3 +41,8 @@ code {
   text-align: center;
 } */
 
+.ant-card-head-title{
+  text-align: center;
+  font-size: 2em;
+}
+

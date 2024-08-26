@@ -1,9 +1,10 @@
+import { RouterProvider } from 'react-router-dom';
 import './App.css';
-import QuizContainer from './components/Quiz/QuizContainer';
+import { router } from './routing/router';
 
 function App() {
   return (
-    <QuizContainer />
+    <RouterProvider router={router} />
   );
 }
 

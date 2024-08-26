@@ -1,8 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Quiz from './Quiz'
 import QuizCounter from './QuizCounter'
-import { QuizData } from '../../api/QuizData'
-import { useState } from 'react'
+import { ReactQuizData as QuizData } from '../../api/QuizData'
 
 const QuizContainer = () => {
   const [currentIndex, setCurrentIndex] = useState(1)
