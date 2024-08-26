@@ -46,3 +46,11 @@ code {
   font-size: 2em;
 }
 
+:where(.css-dev-only-do-not-override-1gwfwyx).ant-menu-light.ant-menu-horizontal >.ant-menu-item-selected{
+  background-color:#1677ff;
+  color: white;
+}
+:where(.css-dev-only-do-not-override-1gwfwyx).ant-menu-light.ant-menu-horizontal >.ant-menu-item-selected:hover{
+  background-color:#1677ff;
+  color: white;
+}

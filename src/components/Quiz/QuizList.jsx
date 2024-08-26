@@ -19,7 +19,7 @@ const QuizList = () => {
             <List.Item
               actions={[
                 <Button
-                  key={1}
+                  key={item.title}
                   type="primary"
                   iconPosition="end"
                   icon={<SendOutlined />}

@@ -1,35 +1,39 @@
-import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
+import { HomeFilled, LogoutOutlined, PlusCircleFilled } from '@ant-design/icons';
 import { Menu } from 'antd'
-import React from 'react'
+import React, { useState } from 'react'
 
 const Navbar = () => {
+  const [current,setCurrent] = useState('home')
 
   const items = [
     {
       label: 'Home',
       key: 'home',
-      icon: <MailOutlined />,
+      icon: <HomeFilled />,
     },
     {
-      label: 'Navigation Two',
-      key: 'app',
-      icon: <AppstoreOutlined />,
+      label: 'Create a new quiz',
+      key: 'newQuiz',
+      icon: <PlusCircleFilled />,
     },
     {
-      label: 'Navigation Three - Submenu',
-      key: 'SubMenu',
-      icon: <SettingOutlined />,
+      label: 'Logout',
+      key: 'logout',
+      icon: <LogoutOutlined />,
     },
   ];
+  const onClick = (e) => {
+    setCurrent(e.key)
+  }
   return (
     <Menu
         // theme={theme}
-        // onClick={onClick}
+        onClick={onClick}
         // style={{ width: 256 }}
-        // defaultOpenKeys={['sub1']}
-        // selectedKeys={[current]}
+        // defaultOpenKeys={[]}
+        selectedKeys={[current]}
         mode="horizontal"
-        items={items}
+      items={items}
       />
   )
 }
