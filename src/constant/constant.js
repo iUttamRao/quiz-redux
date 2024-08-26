@@ -1,3 +1,5 @@
+import { CssQuizData, HtmlQuizData, JavascriptQuizData, ReactQuizData } from "../api/QuizData"
+
 export const QuizListConstant = [
   {
     title: "React",
@@ -16,3 +18,17 @@ export const QuizListConstant = [
     logo: "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg"
   }
 ]
+
+export const renderQuiz = (name) => {
+  switch (name) {
+    case 'React':
+      return ReactQuizData
+    case 'Javascript':
+      return JavascriptQuizData
+    case 'HTML':
+      return HtmlQuizData
+    case 'CSS':
+      return CssQuizData
+  }
+
+}
