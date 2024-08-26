@@ -3,7 +3,7 @@ import { Menu } from 'antd'
 import React, { useState } from 'react'
 
 const Navbar = () => {
-  const [current,setCurrent] = useState('home')
+  const [current, setCurrent] = useState('home')
 
   const items = [
     {
@@ -27,14 +27,13 @@ const Navbar = () => {
   }
   return (
     <Menu
-        // theme={theme}
-        onClick={onClick}
-        // style={{ width: 256 }}
-        // defaultOpenKeys={[]}
-        selectedKeys={[current]}
-        mode="horizontal"
+      // theme={theme}
+      onClick={onClick}
+      // defaultOpenKeys={[]}
+      selectedKeys={[current]}
+      mode="horizontal"
       items={items}
-      />
+    />
   )
 }
 

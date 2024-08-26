@@ -49,8 +49,10 @@ code {
 :where(.css-dev-only-do-not-override-1gwfwyx).ant-menu-light.ant-menu-horizontal >.ant-menu-item-selected{
   background-color:#1677ff;
   color: white;
+  box-shadow: 1px 1px 10px rgb(1, 107, 255);
 }
 :where(.css-dev-only-do-not-override-1gwfwyx).ant-menu-light.ant-menu-horizontal >.ant-menu-item-selected:hover{
   background-color:#1677ff;
   color: white;
+  box-shadow: 1px 1px 10px rgb(1, 107, 255);
 }
