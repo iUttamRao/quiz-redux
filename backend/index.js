@@ -1,10 +1,6 @@
-import express from 'express'
 import { connectDB } from './db/index.js'
-const app = express()
+import { app } from './app.js'
 
-app.get("/", (req, res) => {
-  res.send("Hello World")
-})
 
 connectDB().then(() => {
   app.listen(5000, () => {
