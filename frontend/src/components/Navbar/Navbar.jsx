@@ -1,4 +1,4 @@
-import { HomeFilled, LogoutOutlined, PlusCircleFilled } from '@ant-design/icons';
+import { ContainerFilled, HomeFilled, LogoutOutlined, PlusCircleFilled } from '@ant-design/icons';
 import { Menu } from 'antd'
 import React, { useState } from 'react'
 
@@ -15,6 +15,11 @@ const Navbar = () => {
       label: 'Create a new quiz',
       key: 'newQuiz',
       icon: <PlusCircleFilled />,
+    },
+    {
+      label: 'Results',
+      key: 'results',
+      icon: <ContainerFilled />,
     },
     {
       label: 'Logout',

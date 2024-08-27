@@ -1,0 +1,6 @@
+export const DEFAULT = '/'
+export const QUIZLIST = '/quiz'
+export const QUIZ = '/quiz/:quizname'
+export const RESULTLIST = '/result'
+export const RESULT = '/result/:resultid'
+export const NEWQUIZ = '/newquiz'
