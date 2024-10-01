@@ -1,19 +1,29 @@
-import { ContainerFilled, HomeFilled, LogoutOutlined, PlusCircleFilled } from '@ant-design/icons';
+import { ContainerFilled, HomeFilled, LogoutOutlined, PlusCircleFilled, QuestionCircleFilled, UserOutlined } from '@ant-design/icons';
 import { Menu } from 'antd'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
-  const [current, setCurrent] = useState('home')
+  const location = useLocation();
+  const navigate = useNavigate()
+  const [current, setCurrent] = useState(location.pathname.substring(1) || 'quiz');
+
+  // useEffect(() => {
+  //   console.log(location.pathname)
+  //   if (location.pathname.includes("quiz/edit")){
+  //     setCurrent("quiz")
+  //   }
+  // },[location])
 
   const items = [
     {
-      label: 'Home',
-      key: 'home',
-      icon: <HomeFilled />,
+      label: 'Quiz',
+      key: 'quiz',
+      icon: <QuestionCircleFilled />
     },
     {
-      label: 'Create a new quiz',
-      key: 'newQuiz',
+      label: 'Create Quiz',
+      key: 'quiz/create',
       icon: <PlusCircleFilled />,
     },
     {
@@ -22,22 +32,34 @@ const Navbar = () => {
       icon: <ContainerFilled />,
     },
     {
+      label: `${localStorage.getItem("name")} (${localStorage.getItem("role")})`,
+      key: 'profile',
+      icon: <UserOutlined />,
+    },
+    {
       label: 'Logout',
       key: 'logout',
       icon: <LogoutOutlined />,
     },
   ];
   const onClick = (e) => {
-    setCurrent(e.key)
+    if (e.key === 'logout') {
+      localStorage.clear()
+      navigate('/')
+    }
+    else {
+      setCurrent(e.key)
+      navigate(`/${e.key}`)
+    }
+
+
   }
   return (
     <Menu
-      // theme={theme}
       onClick={onClick}
-      // defaultOpenKeys={[]}
       selectedKeys={[current]}
       mode="horizontal"
-      items={items}
+      items={localStorage.getItem("role") === 'teacher' ? items : items.filter((item) => (item.key !== "quiz/create" && item.key !== "results"))}
     />
   )
 }

@@ -33,7 +33,7 @@ code {
 }
 
 .container{
-  margin : 10px auto;
+  margin : 20px auto;
   width: 60%;
 }
 
@@ -56,3 +56,47 @@ code {
   color: white;
   box-shadow: 1px 1px 10px rgb(1, 107, 255);
 }
+
+.home-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  overflow: hidden; /* Ensure no scrollbars */
+  background-color: #f0f0f0; /* Optional background color */
+}
+
+.home-container img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensures the image covers the container */
+}
+
+.home-button {
+  position: absolute;
+  top: 65%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Shift the button to center precisely */
+  z-index: 1; /* Make sure the button appears above the image */
+  padding: 20px 30px;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.form-container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;
+}
+
+.profile-container{
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;
+}
+

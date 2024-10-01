@@ -1,6 +1,9 @@
 export const DEFAULT = '/'
+export const LOGIN = "/login"
+export const REGISTER = "/register"
+export const PROFILE = "/profile"
 export const QUIZLIST = '/quiz'
-export const QUIZ = '/quiz/:quizname'
-export const RESULTLIST = '/result'
-export const RESULT = '/result/:resultid'
-export const NEWQUIZ = '/newquiz'
+export const QUIZ = '/quiz/:id'
+export const RESULTLIST = '/results'
+export const CREATEQUIZ = '/quiz/create'
+export const EDITQUIZ = '/quiz/edit/:id'
